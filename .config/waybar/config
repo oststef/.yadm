@@ -11,8 +11,8 @@
          "sort-by-name": true,
          "format": " {icon} ",
          "format-icons": {
-             "default": "",
-         },
+             "default": ""
+         }
      },
     "tray": {
         "icon-size": 21,
@@ -51,22 +51,17 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
+        "format": "{icon}  {volume}%",
         "format-muted": "",
         "format-icons": {
             "default": ["", "", " "]
         },
         "on-click": "pavucontrol"
     },
-    "custom/lock": {
-        "tooltip": false,
-        "on-click": "sh -c '(sleep 0.5s; swaylock --grace 0)' & disown",
-        "format": "",
-    },
     "custom/power": {
         "tooltip": false,
         "on-click": "wlogout &",
-        "format": "襤"
+        "format": "⏻"
     }
 }
 
