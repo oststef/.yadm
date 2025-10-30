@@ -1,0 +1,35 @@
+#!/bin/sh
+
+cd "$HOME" || exit
+
+echo "Init configuration"
+
+echo "Installing Hyprland and dependencies"
+yay -S hyprland kitty nautilus hyprlock hyprpaper waybar wofi wlogout swaync --noconfirm --needed --nocleanmenu --nodiffmenu --noeditmenu
+
+echo "Init terminal config"
+
+yay -S zsh tmux neovim github-cli --noconfirm --needed --nocleanmenu --nodiffmenu --noeditmenu
+
+ZSH_PATH=$(command -v zsh)
+if ! grep -q "$ZSH_PATH" /etc/shells; then
+  echo "Adding $ZSH_PATH to /etc/shells"
+  echo "$ZSH_PATH" | sudo tee -a /etc/shells
+fi
+
+echo "Changing default shell to $ZSH_PATH for $USER"
+chsh -s "$ZSH_PATH" "$USER"
+
+curl -s https://ohmyposh.dev/install.sh | bash -s
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+
+echo "Setting up asdf version manager"
+yay -S asdf
+
+asdf add nodejs
+asdf add python
+asdf add rust
+asdf add golang
+asdf add erlang
+asdf add elixir
