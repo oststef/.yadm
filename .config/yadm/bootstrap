@@ -27,9 +27,9 @@ bash -c "$(curl --fail --show-error --silent --location https://raw.githubuserco
 echo "Setting up asdf version manager"
 yay -S asdf
 
-asdf add nodejs
-asdf add python
-asdf add rust
-asdf add golang
-asdf add erlang
-asdf add elixir
+asdf plugin add nodejs
+asdf plugin add python
+asdf plugin add rust
+asdf plugin add golang
+asdf plugin add erlang
+asdf plugin add elixir
