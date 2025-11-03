@@ -25,6 +25,7 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
 
 # Oh-My-Posh
+export PATH=$PATH:/home/steffen/.local/bin
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/omp.toml)"
 
 # ~/.zshrc — interactive shell startup
