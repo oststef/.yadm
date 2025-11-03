@@ -5,11 +5,11 @@ cd "$HOME" || exit
 echo "Init configuration"
 
 echo "Installing Hyprland and dependencies"
-yay -S hyprland kitty nautilus hyprlock hyprpaper waybar wofi wlogout swaync --noconfirm --needed --nocleanmenu --nodiffmenu --noeditmenu
+yay -S hyprland kitty nautilus hyprlock hyprpaper waybar wofi wlogout swaync --noconfirm
 
 echo "Init terminal config"
 
-yay -S zsh tmux neovim github-cli --noconfirm --needed --nocleanmenu --nodiffmenu --noeditmenu
+yay -S zsh tmux neovim github-cli --noconfirm
 
 ZSH_PATH=$(command -v zsh)
 if ! grep -q "$ZSH_PATH" /etc/shells; then

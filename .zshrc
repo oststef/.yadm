@@ -1,3 +1,5 @@
+[[ -z "$HOSTNAME" ]] && export HOSTNAME=$(hostname)
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
