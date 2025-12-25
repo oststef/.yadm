@@ -1,5 +1,8 @@
 [[ -z "$HOSTNAME" ]] && export HOSTNAME=$(hostname)
 
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -29,8 +32,9 @@ export PATH=$PATH:/home/steffen/.local/bin
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/omp.toml)"
 
 # ~/.zshrc — interactive shell startup
-# TODO: check why this is not working
-# source "${ASDF_DATA_DIR}/asdf.sh"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+export PATH=/home/steffen/.cache/rebar3/bin:$PATH
 
 # ls colors
 eval "$(dircolors)"
