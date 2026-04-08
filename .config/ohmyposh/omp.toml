@@ -19,6 +19,30 @@ enable_cursor_positioning = true
     [blcoks.segments.properties]
       threshold = 5000
 
+  # Python
+  [[blocks.segments]]
+    type = "python"
+    style = "plain"
+    background = "transparent"
+    foreground = "#FFD43B"
+    template = " \uE73C {{ .Full }}"
+
+  # Elixir
+  [[blocks.segments]]
+    type = "elixir"
+    style = "plain"
+    background = "transparent"
+    foreground = "#4e2a8e"
+    template = " \uE62D {{ .Full }}"
+
+  # Go
+  [[blocks.segments]]
+    type = "go"
+    style = "plain"
+    background = "transparent"
+    foreground = "#00ADD8"
+    template = " \uE627 {{ .Full }}"
+
 [[blocks]]
   type = "prompt"
   alignment = "left"
