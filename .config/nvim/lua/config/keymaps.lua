@@ -8,3 +8,5 @@ map("n", "<C-h>", "<cmd> TmuxNavigateLeft<CR>", { desc = "Go to left pane" })
 map("n", "<C-l>", "<cmd> TmuxNavigateRight<CR>", { desc = "Go to right pane" })
 map("n", "<C-j>", "<cmd> TmuxNavigateDown<CR>", { desc = "Go to down pane" })
 map("n", "<C-k>", "<cmd> TmuxNavigateUp<CR>", { desc = "Go to up pane" })
+
+map("n", "<leader>h", vim.lsp.buf.hover, { desc = "LSP Hover" })
